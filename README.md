@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Bleu Orleans - Vintage Jewelry Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based website showcasing vintage jewelry and accessories by Myra Ponder Mccrary.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Responsive Design**: Mobile-first approach with hamburger menu navigation
+- **About Section**: Personal story and background of Myra Ponder Mccrary
+- **Email Notification**: Sign-up form for shop updates and new product drops
+- **Customer Reviews**: Showcase of 5-star reviews from Facebook Marketplace
+- **Featured Products**: Highlight of newest and most popular pieces
+- **Product Catalog**: Complete product listing with detailed information
 
-### `npm start`
+## New Home Page Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The home page has been updated with the following sections:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Navigation Header**: Sticky navigation with logo, dropdown menu, and mobile hamburger menu
+2. **About Section**: Personal introduction with photo and story
+3. **Email Notification**: Newsletter signup form
+4. **Customer Reviews**: Facebook reviews display
+5. **Featured Products**: Showcase of newest products
+6. **Footer**: Social links and site navigation
 
-### `npm test`
+## Required Images
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The following images need to be added to the `/public/assets/` directory:
 
-### `npm run build`
+### Logo and Branding
+- `logo_crop.jpg` - Bleu Orleans logo (40x40px recommended)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### About Section
+- `myra_showcase.jpg` - Photo of Myra Ponder Mccrary (400px width recommended)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Featured Products
+- `vintageSparklyBrooch.jpg` - Vintage Sparkly Rhinestone Brooch & Chain Necklace
+- `silverBead1.jpg` - Triple Layered Vintage Brass & Silver Tone Bead Necklace
+- `antiqueTranslucentCarnelianStoneWatchFobCharm.jpg` - Antique Carnelian Watch Fob Charm
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Product Images
+All product images referenced in `src/products.json` should be placed in `/public/assets/` directory.
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Add the required images to `/public/assets/` directory
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Learn More
+## Mobile Responsiveness
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The website is fully responsive with:
+- Mobile hamburger menu navigation
+- Responsive grid layouts
+- Touch-friendly interface
+- Optimized typography for all screen sizes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Technologies Used
 
-### Code Splitting
+- React 18
+- React Router DOM
+- CSS3 with Flexbox and Grid
+- Responsive design principles
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contact
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For questions about the website or to purchase jewelry, contact Myra Ponder Mccrary through:
+- Facebook Marketplace: [Bleu Orleans](https://www.facebook.com/marketplace/profile/bleuorleans)
+- Email: info@bleuorleans.com
