@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/BleuOrleans/static/css/main.3eac1866.css",
-    "main.js": "/BleuOrleans/static/js/main.5e499351.js",
+    "main.css": "/BleuOrleans/static/css/main.5b195ba3.css",
+    "main.js": "/BleuOrleans/static/js/main.e9fda432.js",
     "index.html": "/BleuOrleans/index.html",
-    "main.3eac1866.css.map": "/BleuOrleans/static/css/main.3eac1866.css.map",
-    "main.5e499351.js.map": "/BleuOrleans/static/js/main.5e499351.js.map"
+    "main.5b195ba3.css.map": "/BleuOrleans/static/css/main.5b195ba3.css.map",
+    "main.e9fda432.js.map": "/BleuOrleans/static/js/main.e9fda432.js.map"
   },
   "entrypoints": [
-    "static/css/main.3eac1866.css",
-    "static/js/main.5e499351.js"
+    "static/css/main.5b195ba3.css",
+    "static/js/main.e9fda432.js"
   ]
 }
