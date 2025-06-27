@@ -368,6 +368,9 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
+  left: 0;
+  right: 0;
 }
 
 .header-inner {
@@ -604,6 +607,9 @@
   color: #fff;
   padding: 3rem 2rem 1rem;
   margin-top: auto;
+  width: 100%;
+  left: 0;
+  right: 0;
 }
 
 .footer-inner {

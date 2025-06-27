@@ -73,7 +73,7 @@ const ProductDetail = () => {
       <nav className="main-header">
         <div className="header-inner">
           <div className="brand" style={{ display: 'flex', alignItems: 'center', gap: '0.7rem' }}>
-            <img alt="Bleu Orleans Logo" className="nav-logo" src="/assets/logo_crop.jpg" />
+            <img alt="Bleu Orleans Logo" className="nav-logo" src="/BleuOrleans/assets/logo_crop.jpg" />
             {contactData.business.name}
           </div>
           <button 
@@ -89,12 +89,12 @@ const ProductDetail = () => {
           </button>
           <ul className={`nav-links ${isMenuOpen ? 'nav-links-open' : ''}`} id="main-nav-links">
             <li className="nav-home-dropdown">
-              <a href="/#about">Home</a>
+              <Link to="/">Home</Link>
               <ul className="submenu">
-                <li><a href="/#about">About</a></li>
-                <li><a href="/#notify">Email Notify</a></li>
-                <li><a href="/#reviews">Reviews</a></li>
-                <li><a href="/#featured">Featured Products</a></li>
+                <li><Link to="/#about">About</Link></li>
+                <li><Link to="/#notify">Email Notify</Link></li>
+                <li><Link to="/#reviews">Reviews</Link></li>
+                <li><Link to="/#featured">Featured Products</Link></li>
               </ul>
             </li>
             <li><Link to="/shop">Shop</Link></li>
@@ -133,12 +133,12 @@ const ProductDetail = () => {
                   onClick={handleOpenFullscreen}
                   style={{ cursor: 'zoom-in' }}
                 >
-                  <source src={`/assets/${product.assets[current]}`} type="video/mp4" />
+                  <source src={`/BleuOrleans/assets/${product.assets[current]}`} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               ) : (
                 <img
-                  src={`/assets/${product.assets[current]}`}
+                  src={`/BleuOrleans/assets/${product.assets[current]}`}
                   alt={`${product.name} asset ${current + 1}`}
                   className="product-carousel-media"
                   onTouchStart={handleTouchStart}
@@ -251,12 +251,12 @@ const ProductDetail = () => {
                 onTouchStart={handleFullscreenTouchStart}
                 onTouchEnd={handleFullscreenTouchEnd}
               >
-                <source src={`/assets/${product.assets[current]}`} type="video/mp4" />
+                <source src={`/BleuOrleans/assets/${product.assets[current]}`} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             ) : (
               <img
-                src={`/assets/${product.assets[current]}`}
+                src={`/BleuOrleans/assets/${product.assets[current]}`}
                 alt={`${product.name} asset ${current + 1}`}
                 className="fullscreen-media"
                 onClick={e => e.stopPropagation()}

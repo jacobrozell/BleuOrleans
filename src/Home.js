@@ -23,7 +23,7 @@ const Home = () => {
       <nav className="main-header">
         <div className="header-inner">
           <div className="brand" style={{ display: 'flex', alignItems: 'center', gap: '0.7rem' }}>
-            <img alt="Bleu Orleans Logo" className="nav-logo" src="/assets/logo_crop.jpg" />
+            <img alt="Bleu Orleans Logo" className="nav-logo" src="/BleuOrleans/assets/logo_crop.jpg" />
             {contactData.business.name}
           </div>
           <button 
@@ -39,12 +39,12 @@ const Home = () => {
           </button>
           <ul className={`nav-links ${isMenuOpen ? 'nav-links-open' : ''}`} id="main-nav-links">
             <li className="nav-home-dropdown">
-              <a href="#">Home</a>
+              <Link to="/">Home</Link>
               <ul className="submenu">
-                <li><a href="/#about">About</a></li>
-                <li><a href="/#notify">Email Notify</a></li>
-                <li><a href="/#reviews">Reviews</a></li>
-                <li><a href="/#featured">Featured Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#notify">Email Notify</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#featured">Featured Products</a></li>
               </ul>
             </li>
             <li><Link to="/shop">Shop</Link></li>
@@ -56,14 +56,16 @@ const Home = () => {
 
       <section id="about" className="about-section">
         <div className="about-content">
-          <img alt={contactData.owner.name} className="about-photo" src="/assets/myra_showcase.jpg" />
+          <div className="about-photo-container">
+            <img alt={contactData.owner.name} className="about-photo" src="/BleuOrleans/assets/myra_showcase.jpg" />
+          </div>
           <div>
             <h1>About {contactData.owner.name}</h1>
             <div className="about-divider"></div>
             <p>{contactData.owner.bio}</p>
             <div className="about-quote">"{contactData.owner.quote}"</div>
             <p style={{ marginTop: '1rem' }}>
-              <a className="about-email" href="/contact">Contact {contactData.owner.name.split(' ')[0]}</a>
+              <Link className="about-email" to="/contact">Contact {contactData.owner.name.split(' ')[0]}</Link>
             </p>
           </div>
         </div>
@@ -271,46 +273,101 @@ const Home = () => {
 
       <section id="featured" className="featured-products">
         <h3>Newest Products</h3>
-        <Link to="/product/vintage-sparkly-rhinestone-brooch-chain" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <div>
-            <img alt="Vintage Sparkly Rhinestone Brooch & Vtg Chain Custom Made Necklace" src="/assets/vintageSparklyRhinestoneBroochAndVTGChain.jpg" />
-            <div className="product-details">
-              <h4>Vintage Sparkly Rhinestone Brooch & Vtg Chain Custom Made Necklace</h4>
-              <p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginTop: '2rem' }}>
+          <Link to="/product/vintage-sparkly-rhinestone-brooch-chain" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div className="product-card" style={{ position: 'relative' }}>
+              <div style={{ position: 'relative' }}>
+                <img 
+                  className="product-card-image" 
+                  alt="Vintage Sparkly Rhinestone Brooch & Vtg Chain Custom Made Necklace" 
+                  src="/BleuOrleans/assets/vintageSparklyRhinestoneBroochAndVTGChain.jpg" 
+                />
+                <span style={{
+                  position: 'absolute',
+                  bottom: '12px',
+                  right: '12px',
+                  background: 'rgba(25, 118, 210, 0.92)',
+                  color: 'rgb(255, 255, 255)',
+                  padding: '0.4rem 0.9rem',
+                  borderRadius: '8px',
+                  fontWeight: '700',
+                  fontSize: '1.08rem',
+                  boxShadow: 'rgba(30, 40, 80, 0.1) 0px 2px 8px'
+                }}>
+                  $160
+                </span>
+              </div>
+              <h2 className="product-card-title">Vintage Sparkly Rhinestone Brooch & Vtg Chain Custom Made Necklace</h2>
+              <p className="product-card-description">
                 A dazzling custom necklace made from a vintage rhinestone brooch bursting with brilliant blues, 
                 greens, reds, and pinks. Paired with a vintage link chain. No missing stones or color loss—just pure sparkle.
               </p>
-              <div className="product-price">$160</div>
             </div>
-          </div>
-        </Link>
-        <Link to="/product/triple-layered-brass-silver-bead-pendant" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <div>
-            <img alt="Tripple Layered Vintage Brass & Silver Tone Large Bead Pendant Necklace" src="/assets/brassSilverToneLargeBeadPendantNecklace.jpg" />
-            <div className="product-details">
-              <h4>Tripple Layered Vintage Brass & Silver Tone Large Bead Pendant Necklace</h4>
-              <p>
+          </Link>
+          
+          <Link to="/product/triple-layered-brass-silver-bead-pendant" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div className="product-card" style={{ position: 'relative' }}>
+              <div style={{ position: 'relative' }}>
+                <img 
+                  className="product-card-image" 
+                  alt="Tripple Layered Vintage Brass & Silver Tone Large Bead Pendant Necklace" 
+                  src="/BleuOrleans/assets/brassSilverToneLargeBeadPendantNecklace.jpg" 
+                />
+                <span style={{
+                  position: 'absolute',
+                  bottom: '12px',
+                  right: '12px',
+                  background: 'rgba(25, 118, 210, 0.92)',
+                  color: 'rgb(255, 255, 255)',
+                  padding: '0.4rem 0.9rem',
+                  borderRadius: '8px',
+                  fontWeight: '700',
+                  fontSize: '1.08rem',
+                  boxShadow: 'rgba(30, 40, 80, 0.1) 0px 2px 8px'
+                }}>
+                  $40
+                </span>
+              </div>
+              <h2 className="product-card-title">Tripple Layered Vintage Brass & Silver Tone Large Bead Pendant Necklace</h2>
+              <p className="product-card-description">
                 Triple-layered necklace featuring vintage brass and silver-tone chains with a bold vintage bead pendant. 
                 Shortest strand is approx. 17". Custom lengths available upon request.
               </p>
-              <div className="product-price">$40</div>
             </div>
-          </div>
-        </Link>
-        <Link to="/product/carnelian-watch-fob-brass-chain" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <div>
-            <img alt="Antique Translucent Carnelian Stone Watch Fob Charm on a Vintage Double Layered Brass Chain" src="/assets/carnelianStoneWatchFobcharmVintageBrassChain.jpg" />
-            <div className="product-details">
-              <h4>Antique Translucent Carnelian Stone Watch Fob Charm on a Vintage Double Layered Brass Chain</h4>
-              <p>
+          </Link>
+          
+          <Link to="/product/carnelian-watch-fob-brass-chain" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div className="product-card" style={{ position: 'relative' }}>
+              <div style={{ position: 'relative' }}>
+                <img 
+                  className="product-card-image" 
+                  alt="Antique Translucent Carnelian Stone Watch Fob Charm on a Vintage Double Layered Brass Chain" 
+                  src="/BleuOrleans/assets/carnelianStoneWatchFobcharmVintageBrassChain.jpg" 
+                />
+                <span style={{
+                  position: 'absolute',
+                  bottom: '12px',
+                  right: '12px',
+                  background: 'rgba(25, 118, 210, 0.92)',
+                  color: 'rgb(255, 255, 255)',
+                  padding: '0.4rem 0.9rem',
+                  borderRadius: '8px',
+                  fontWeight: '700',
+                  fontSize: '1.08rem',
+                  boxShadow: 'rgba(30, 40, 80, 0.1) 0px 2px 8px'
+                }}>
+                  $48
+                </span>
+              </div>
+              <h2 className="product-card-title">Antique Translucent Carnelian Stone Watch Fob Charm on a Vintage Double Layered Brass Chain</h2>
+              <p className="product-card-description">
                 One-of-a-kind necklace showcasing a large translucent Carnelian sphere cradled in brass petals—originally 
                 part of an antique watch fob. Hung on a double-layered vintage brass chain, approx. 17" long. 
                 Custom sizing available upon request.
               </p>
-              <div className="product-price">$48</div>
             </div>
-          </div>
-        </Link>
+          </Link>
+        </div>
       </section>
 
       <div style={{ textAlign: 'center', margin: '2rem 0px' }}>
